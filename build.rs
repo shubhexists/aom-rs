@@ -154,7 +154,7 @@ fn main() {
     for header in &HEADERS {
         let header_path = Path::new(&aom_include_path).join(header);
         if !header_path.exists() {
-            eprintln!("Header file {} not found in {}.", header, aom_include_path);
+            eprintln!("Header file {} not found in {:?}.", header, header_path);
             headers_exist = false;
         } else {
             println!("Found header file: {:?}", header_path);
